@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <title>My Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <h2>Ava.id</h2>
+            <ul class="nav_list">
+                <li class="nav_item"><a href="#about-me" title="about me">About Me</a></li>
+                <li class="nav_item"><a href="#service" title="service">Service</a></li>
+                <li class="nav_item"><a href="#portfolio" title="portfolio">Portfolio</a></li>
+                <li class="nav_item"><a href="#contact" title="contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="jumbotron">
+            <div class="intro">
+                <h4><strong>Hello</strong>, I am Fathonah Zuchriyah</h4>
+                <h1><span class="intro-text-web">Web</span> Developer</h1>
+                <p>Developing your success online.</p>
+                <div class="btn_wrapper">
+                    <button class="btn hire">Hire me</button>
+                    <button class="btn downloadcv">Download CV</button>
+                </div>
+            </div>
+            <img src="assets/image/web_dev.svg" alt="web developer illustration" class="web-dev-img">
+        </div>
+    </header>
+    <main class="container">
+        <div id="content" class="content">
+            <article id="about-me" class="aboutme">
+                <img src="assets/image/about_me.svg" alt="about me">
+                <div class="aboutme-text">
+                    <h3>Profile</h3>
+                    <h2>About Me</h2>
+                    <p>Hello, my name is Fathonah Zuchriyah,<br>you can call my nickname Afa.<br>I design website and develope website.</p>
+                </div>
+            </article>
+            <article id="service" class="service">
+                <div class="service-title">
+                    <h3>Service</h3>
+                    <h2>What I Do</h2>
+                </div>
+                <section class="service-card-wrapper">
+                    <div class="card card-service">
+                        <img src="assets/image/front-end.svg" alt="front-end icon" class="service-img">
+                        <h3>Front-end</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio hic animi necessitatibus minus sequi odit explicabo, est repudiandae aperiam voluptas, quis obcaecati harum laboriosam? Consectetur impedit laboriosam eaque ipsa debitis.</p>
+                    </div>
+                    <div class="card card-service">
+                        <img src="assets/image/back-end.svg" alt="back-end icon" class="service-img">
+                        <h3>Back-end</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio hic animi necessitatibus minus sequi odit explicabo, est repudiandae aperiam voluptas, quis obcaecati harum laboriosam? Consectetur impedit laboriosam eaque ipsa debitis.</p>
+                    </div>
+                    <div class="card card-service">
+                        <img src="assets/image/consultation.svg" alt="consultancy icon" class="service-img">
+                        <h3>Consultancy</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio hic animi necessitatibus minus sequi odit explicabo, est repudiandae aperiam voluptas, quis obcaecati harum laboriosam? Consectetur impedit laboriosam eaque ipsa debitis.</p>
+                    </div>
+                </section>
+            </article>
+            <article id="portfolio" class="portfolio">
+                <div class="service-title">
+                    <h3>Porfolio</h3>
+                    <h2>My Work</h2>
+                </div>
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 3</div>
+                      <img src="assets/image/slide-1.jpg" style="width:100%">
+                      <div class="text">Caption Text</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 3</div>
+                      <img src="assets/image/slide-2.jpg" style="width:100%">
+                      <div class="text">Caption Two</div>
+                    </div>
+                    
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 3</div>
+                      <img src="assets/image/slide-3.jpg" style="width:100%">
+                      <div class="text">Caption Three</div>
+                    </div>
+                    
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    
+                </div>
+                <br>
+                    
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span> 
+                    <span class="dot" onclick="currentSlide(2)"></span> 
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                </div>
+            </article>
+            <article id="contact" class="contact">
+                <div class="service-title">
+                    <h3>Contact</h3>
+                    <h2>Get In Touch</h2>
+                </div>
+                <div class="contact-wrapper">
+                    <img src="assets/image/send-email.svg" alt="send email illustration">
+                    <div class="form-email">
+                        <form action="#" method="get" id="form-send-email">
+                            <input type="text" name="name" id="name" class="form-input" placeholder="Your Name.." required>
+                            <input type="email" name="emal" id="email" class="form-input" placeholder="Your Email.." required>
+                            <textarea name="message" id="message" class="textarea" placeholder="Write Your Message.." ></textarea>
+                        </form>
+                        <button type="submit" form="form-send-email" value="Submit">Sumbit</button>
+                    </div>
+                </div>
+            </article>
+        </div>    
+        <aside>
+            <article class="profile">
+                <header>
+                    <figure>
+                        <img src="assets/image/afa.jpg" alt="profile picture">
+                        <figcaption>Fathonah Zuchriyah</figcaption>
+                    </figure>
+                </header>
+                <section>
+                    <ul class="bio-list">
+                        <li class="bio-item"><i class="fa far fa-envelope"></i>afhazachra@gmail.com</li>
+                        <li class="bio-item"><i class="fa fas fa-phone-alt"></i>+62 85-786-234-806</li>
+                        <li class="bio-item"><i class="fa fas fa-map-marker-alt"></i>Sleman, Yogyakarta</li>
+                    </ul>
+                </section>
+                <section>
+                    <ul class="social-list">
+                        <li class="social-item"><a href="https://instagram.com/afafaa_" target="_blank" title="Instagram Page"><i class="fab fa-instagram"></i></a></li>
+                        <li class="social-item"><a href="https://github.com/afaafa" target="_blank" title="Github Page"><i class="fab fa-github"></i></a></li>
+                        <li class="social-item"><a href="https://dribbble.com/afafaa" target="_blank" title="Dribbble Page"><i class="fab fa-dribbble"></i></a></li>
+                    </ul>
+                </section>
+            </article>
+        </aside>
+    </main>
+    <footer>
+        <p>Copyright &#169; 2021, Fathonah Zuchriyah</p>
+        <div class="attribution">
+            <div>Icons made by
+                <a href="https://www.flaticon.com/authors/flat-icons" title="Flat Icons">Flat Icons</a>
+                &
+                <a href="https://www.freepik.com" title="Freepik">Freepik</a>
+                from
+                <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+            
+                | Slider Image: 
+                <a href='https://www.freepik.com/vectors/banner'>Banner vector</a>
+                ,
+                <a href='https://www.freepik.com/vectors/technology'>Technology vector</a>
+                &
+                <a href='https://www.freepik.com/vectors/design'>Design vector, created by upklyak - www.freepik.com</a>
+            </div>
+        </div>
+    </footer>
+    <script src="scripts/index.js"></script>
+</body>
+</html>

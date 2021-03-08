@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
+
+* {
+    box-sizing: border-box;
+ }
+
+ *:focus {
+    border: 1px solid #769fcd;
+ }
+
+body {
+    font-family:"Quicksand", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar {
+   position: fixed;
+   top: 0;
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   transition: top 0.3s;
+   align-items: center;
+   z-index: 1;
+ }
+ 
+#navbar a {
+   display: block;
+   color: #333;
+   text-align: center;
+   padding: 15px;
+   text-decoration: none;
+   font-size: 20px;
+}
+ 
+#navbar a:hover {
+   -webkit-transform: scale(1.08);
+   transform: scale(1.08);
+   font-weight: bold;
+   text-decoration: underline;
+   text-decoration-thickness: 5px;
+   text-underline-offset: 4px;
+   text-decoration-color: #769fcd;
+}
+
+.nav_list {
+   display: flex;
+   padding-right: 20px;
+   margin: 0;
+}
+
+.nav_item {
+   list-style-type: none;
+}
+
+nav > h2 {
+   font-family: 'Caveat', cursive;
+   font-size: 40px;
+   color: #769fcd;
+   margin: 0;
+   padding: 20px;
+}
+
+.jumbotron {
+   display: flex;
+   justify-content: space-evenly;
+   align-items: center;
+   min-height: 500px;
+   width: 100%;
+   text-align: left;
+   color: #333;
+   background-color: #d6e6f2;
+}
+
+.intro > h4 {
+   font-weight: lighter;
+   font-size: 20px;
+   margin: 10px 0;
+}
+
+.intro > h1 {
+   font-size: 60px;
+   margin: 10px 0;
+}
+
+.intro-text-web {
+   color: #769fcd;
+}
+
+.web-dev-img {
+   width: 40%;
+}
+
+.btn_wrapper {
+   margin-top: 50px;
+}
+
+.btn {
+padding: 12px 24px;
+width: 190px;
+display: inline-block;
+border-radius: 8px;
+text-align: center;
+border: none;
+font-family:"Quicksand", sans-serif;
+font-size: 20px;
+}
+ 
+.btn:hover {
+   font-weight: bold;
+}
+
+.hire {
+   color: white;
+   background-color: #769fcd;
+   margin-right: 10px;
+   box-shadow: 0 10px 40px rgb(118 159 205 / 50%);
+}
+
+.hire:hover {
+   background-color: #b9d7ea;
+}
+
+.downloadcv {
+   color: #769fcd;
+   background-color: white;
+   box-shadow: 0 10px 40px rgb(0 0 0 / 8%);
+}
+
+.downloadcv:hover {
+   background-color: #f7fbfc;
+ }
+
+main {
+   padding: 20px;
+   overflow: auto;
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+   max-width: 1170px;
+   min-width: 44px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+.content {
+   margin-bottom: 20px;
+ }
+
+ .aboutme {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-height: 500px;
+ }
+
+ .aboutme > img {
+   width: 40%;
+ }
+
+ .aboutme-text {
+   padding-left: 10px;
+   color: #333;
+ }
+
+ .aboutme-text > h2 {
+   margin: 5px 0;
+   font-family: 'Caveat', cursive;
+   font-size: 40px;
+}
+
+ .aboutme-text > h3{
+   margin-bottom: 5px;
+   color: #769fcd;
+}
+
+.service {
+   min-height: 500px;
+   padding: 0 30px 30px 30px;
+}
+
+.service-title {
+   text-align: center;
+   color: #769fcd;
+}
+
+.service-title h2 {
+   font-family: 'Caveat', cursive;
+   color: #333;
+   margin-top: 5px;
+   font-size: 40px;
+}
+
+.service-title h3 {
+   margin-bottom: 5px;
+}
+
+.service-card-wrapper {
+   display: flex;
+   gap: 20px;
+   padding: 0 15px 15px 15px;
+}
+
+.card-service {
+   text-align: center;
+}
+
+.service-img {
+   width: 30%;
+}
+
+.portfolio {
+   min-height: 500px;
+   margin: 2rem 0;
+   padding: 15px 0;
+}
+
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 	16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+.contact {
+   min-height: 500px;
+   margin: 2rem 0;
+   padding: 15px 0;
+}
+
+.contact-wrapper {
+   display: flex;
+   justify-content: center;
+   padding: 0 15px 30px 15px;
+}
+
+.contact-wrapper > img {
+   width: 40%;
+ }
+
+.form-email {
+   width: 300px;
+   margin-left: 10px;
+}
+
+.form-email form {
+   margin-top: 1rem;
+   margin-bottom: 1rem;
+   padding-top: 1rem;
+}
+
+.form-input, .textarea {
+   font-family:"Quicksand", sans-serif;
+   margin: 5px;
+   border-radius: 3px;
+   font-size: 18px;
+   width: 100%;
+   padding: 12px 20px;
+   display: inline-block;
+   border: 1px solid #ccc;
+}
+
+.form-input:focus, .textarea:focus {
+   border: 1px solid #769fcd!important;
+}
+
+.form-email button {
+   font-family:"Quicksand", sans-serif;
+   font-size: 18px;
+   background-color: #769fcd;
+   color: white;
+   padding: 14px 20px;
+   border: none;
+   cursor: pointer;
+   border-radius: 5px;
+   box-shadow: 0 5px 10px rgb(118 159 205 / 20%);
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+   opacity: 0.8;
+}
+
+aside {
+   position: -webkit-sticky; /* Safari */
+   position: sticky;
+   top: 0;
+}
+
+.featured-image {
+   width: 100%;
+   max-height: 300px;
+   object-fit: cover;
+   object-position: center;
+ }
+
+.card {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 5px;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+ .profile img {
+    width: 200px;
+    border-radius: 100px;
+    box-shadow: 0px 17px 40px rgb(0 0 0 / 12%);
+ }
+
+ .profile header {
+     text-align: center;
+ }
+
+ .profile figcaption {
+    padding-top: 40px;
+    font-size: 25px;
+ }
+
+ .table-profile {
+   text-align: left;
+ }
+
+ .bio-list, .social-list {
+   display: flex;
+   justify-content: center;
+ }
+
+ .bio-item {
+    list-style-type: none;
+    margin-right: 10px;
+    color: #333;
+ }
+
+ .fa {
+    margin-right: 4px;
+ }
+
+ .social-item {
+   list-style-type: none;
+   margin-right: 10px;
+   color: #333;
+   font-size: 30px;
+ }
+
+ .social-item a {
+   text-decoration: none;
+   color: #333;
+ }
+
+ .social-item a:hover {
+   color: #769fcd;
+ }
+
+footer {
+   padding: 10px;
+   color: #333;
+   background-color: #b9d7ea;
+   text-align: center;
+   font-weight: bold;
+ }
+
+ .attribution {
+   font-size: xx-small;
+   margin-bottom: 0;
+ }
+
+
+ @media screen and (max-width: 1000px) {
+    #content,
+    aside {
+        width: 100%;
+        padding: 0;
+    }
+ }
+
+ /* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+   .prev, .next,.text {font-size: 11px}
+ }
