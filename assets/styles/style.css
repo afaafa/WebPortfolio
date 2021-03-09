@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css');
 
@@ -6,14 +6,12 @@
     box-sizing: border-box;
  }
 
- *:focus {
-    border: 1px solid #769fcd;
- }
-
 body {
     font-family:"Quicksand", sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f7fbfc;
+    color: #333;
 }
 
 #navbar {
@@ -24,11 +22,10 @@ body {
    justify-content: space-between;
    transition: top 0.3s;
    align-items: center;
-   z-index: 1;
+   z-index: 3;
  }
  
 #navbar a {
-   display: block;
    color: #333;
    text-align: center;
    padding: 15px;
@@ -64,6 +61,10 @@ nav > h2 {
    padding: 20px;
 }
 
+.icon {
+   display: none;
+}
+
 .jumbotron {
    display: flex;
    justify-content: space-evenly;
@@ -84,6 +85,10 @@ nav > h2 {
 .intro > h1 {
    font-size: 60px;
    margin: 10px 0;
+}
+.intro > p {
+   font-size: 20px;
+   font-weight: lighter;
 }
 
 .intro-text-web {
@@ -107,6 +112,7 @@ text-align: center;
 border: none;
 font-family:"Quicksand", sans-serif;
 font-size: 20px;
+font-weight: 500;
 }
  
 .btn:hover {
@@ -201,7 +207,7 @@ main {
 
 .service-card-wrapper {
    display: flex;
-   gap: 20px;
+   gap: 40px;
    padding: 0 15px 15px 15px;
 }
 
@@ -216,99 +222,119 @@ main {
 .portfolio {
    min-height: 500px;
    margin: 2rem 0;
-   padding: 15px 0;
+   padding: 30px;
 }
 
-.mySlides {display: none}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 500px;
-  position: relative;
-  margin: auto;
+/*create slider */
+.slider-container {
+   max-width: 1000px;
+   position: relative;
+   margin: auto;
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 	16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
+.slide {
+   position: absolute;
+   left: 0px;
+   top: 0px;
+   width: 100%;
+   opacity: 0;
+   z-index: 1;
+   -webkit-transition: opacity 0.5s;
+   -o-transition: opacity 0.5s;
+   transition: opacity 0.5s;
+   display: flex;
+   justify-content: space-between;
 }
 
-/* Position the "next button" to the right */
+/* class to show the current slide */
+.showing {
+   opacity: 1;
+   z-index: 2;
+}
+
+.slide-image {
+   width: 50%;
+}
+
+/* align the testimonial in the center */
+.slide-testimonial {
+   margin-left: 80px;
+   display: -webkit-box;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+   -webkit-box-align: center;
+   -ms-flex-align: center;
+   align-items: center;
+}
+
+.slide-img > img {
+   width: 100px;
+   border-radius: 50px;
+   box-shadow: 0px 17px 40px rgb(0 0 0 / 12%);
+}
+
+.slide-person {
+   margin-left: 20px;
+}
+
+.slide-person p {
+   padding: 5px;
+}
+
+/* make the name of the person bold */
+.slide-person .testi {
+   color: #333;
+   font-size: 18px;
+}
+
+.slide-person .name {
+   color:#333;
+   font-weight: bold;
+   font-size: 25px;
+   margin: 0 auto;
+}
+
+/* make their job title light gray */
+.slide-person .job {
+   color: #333;
+   font-size: 18px;
+   margin-top: 0;
+}
+
+/* position the buttons and make them green */
+.slider-button {
+   z-index: 3;
+   display: -ms-flexbox;
+   cursor: pointer;
+   position: absolute;
+   top: 100px;
+   width: auto;
+   padding: 16px;
+   color: #769fcd;
+   font-weight: bold;
+   font-size: 50px;
+   transition: 0.6s ease;
+   border-radius: 0 3px 3px 0;
+   user-select: none;
+}
+
+/*posion the left an right button horizontally */
 .next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
+   right: 440px;
+   border-radius: 3px 0 0 3px;
+ }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+.prev {
+   left: -60px;
 }
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
+ 
+ /* On hover, add a black background color with a little bit see-through */
+ .prev:hover, .next:hover {
+   background-color: rgba(0,0,0,0.8);
+ }
 
 .contact {
    min-height: 500px;
@@ -365,28 +391,16 @@ img {vertical-align: middle;}
 }
 
 /* Add a hover effect for buttons */
-button:hover {
+.form-email button:hover {
    opacity: 0.8;
 }
 
-aside {
-   position: -webkit-sticky; /* Safari */
-   position: sticky;
-   top: 0;
-}
-
-.featured-image {
-   width: 100%;
-   max-height: 300px;
-   object-fit: cover;
-   object-position: center;
- }
-
 .card {
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.1);
    border-radius: 5px;
    padding: 20px;
    margin-top: 20px;
+   background-color: white;
 }
 
  .profile img {
@@ -402,6 +416,7 @@ aside {
  .profile figcaption {
     padding-top: 40px;
     font-size: 25px;
+    font-weight: 600;
  }
 
  .table-profile {
@@ -440,28 +455,25 @@ aside {
  }
 
 footer {
-   padding: 10px;
+   padding: 1px 1px 10px;
    color: #333;
-   background-color: #b9d7ea;
+   background-color: #fff;
    text-align: center;
-   font-weight: bold;
+   font-size: small;
+   box-shadow: 0 -1px 5px rgb(0 0 0 / 20%);
+ }
+
+ footer > p {
+    margin: 10px;
  }
 
  .attribution {
    font-size: xx-small;
    margin-bottom: 0;
  }
-
-
- @media screen and (max-width: 1000px) {
-    #content,
-    aside {
-        width: 100%;
-        padding: 0;
-    }
+ .attribution a {
+   text-decoration: none;
+   color: #333;
  }
 
- /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-   .prev, .next,.text {font-size: 11px}
- }
+

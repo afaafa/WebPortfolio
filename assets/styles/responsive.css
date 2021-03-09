@@ -1,0 +1,252 @@
+/*
+mobile
+*/
+@media only screen and (max-width: 425px) {
+    .intro > h1 {
+        font-size: 30px;
+    }
+    .portfolio {
+        padding: 20px;
+    }
+
+    .slider-button {
+        top: 50px;
+        font-size: 30px;
+    }
+}
+
+/*
+tablet
+*/
+@media screen and (max-width: 768px) {
+    #drawer {
+        display: none;
+    }
+
+    .icon {
+        font-size: 30px;
+        padding: 15px;
+        text-decoration: none;
+        color: #821752;
+        min-width: 44px;
+        min-height: 44px;
+        display: block;
+     }
+     
+    #drawer {
+        overflow: hidden;
+        position: absolute;
+        top: 95px;
+        width: 100%;
+        background-color: rgb(255 255 255 / 90%);
+        z-index: 3;
+        box-shadow:  0 1px 5px rgb(0 0 0 / 20%);    
+    }
+    
+    .open {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+
+    .nav_list {
+        padding: 0;
+        box-shadow:  0 1px 5px rgb(0 0 0 / 20%); 
+    }
+
+    .nav_item {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .nav_item:hover {
+        background-color: rgba(185, 215, 234, 0.9)
+    }
+
+    .jumbotron {
+        flex-direction: column-reverse;
+        text-align: center;
+     }
+
+     .intro {
+        margin: 30px 29px 90px;
+     }
+      
+     .web-dev-img {
+        width: 70%;
+        margin-top: 70px;
+     }
+     
+     .btn_wrapper {
+        display: inline-grid;
+        gap: 6px;
+        margin-top: 20px;
+     }
+     
+     .btn {
+        margin: 5px;
+     }
+
+    .aboutme {
+        flex-direction: column;
+        padding: 50px 0;
+    }
+    
+    .aboutme > img {
+        width: 70%;
+    }
+    
+    .aboutme-text {
+        text-align: center;
+    }
+    
+    .service-card-wrapper {
+        flex-direction: column;
+        gap: 30px;
+     }
+     
+     .card-service {
+        text-align: center;
+        font-weight: 300;
+     }
+     
+     .service-img {
+        width: 30%;
+     }
+     
+     .portfolio {
+        min-height: 800px;
+    }
+    
+     .slide {
+        flex-direction: column;
+     }
+     
+     .slide-image {
+        width: 100%;
+     }
+     
+     /* align the testimonial in the center */
+     .slide-testimonial {
+        margin: 0 auto;
+     }
+     
+     .slide-img > img {
+        width: 70px;
+        border-radius: 35px;
+     }
+     
+     .slide-person {
+        margin-left: 20px;
+     }
+     
+     .slide-person p {
+        padding: 5px;
+     }
+     
+     /* make the name of the person bold */
+     .slide-person .testi {
+        font-size: 16px;
+     }
+     
+     .slide-person .name {
+        font-size: 18px;
+        padding-bottom: 0;
+     }
+     
+     /* make their job title light gray */
+     .slide-person .job {
+        font-size: 16px;
+        padding-top: 0;
+     }
+     
+     /* position the buttons and make them green */
+     .slider-button {
+        width: auto;
+        padding: 10px;
+     }
+     
+     /*posion the left an right button horizontally */
+     .next {
+        right: -10px;
+      }
+     
+     .prev {
+        left: -10px;;
+     }
+     
+     
+     .contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+     }
+     
+     .contact-wrapper > img {
+        width: 70%;
+      }
+     
+     .form-email {
+        margin-left: 0;
+     }
+     
+     
+     .form-input, .textarea {
+        font-size: 16px;
+     }
+     
+     .form-email button {
+        font-size: 16px;
+        font-weight: 600;
+     }
+
+     .bio-list {
+       flex-direction: column;
+       text-align: center;
+       padding-left: 0;
+       font-size: 20px;
+     }
+    
+     .bio-item {
+        line-height: 35px;
+     }
+    
+     .social-list {
+         padding-left: 0;
+     }
+     .fa {
+        margin-right: 4px;
+     }
+    
+     .social-item {
+       list-style-type: none;
+       margin-right: 10px;
+       color: #333;
+     }
+    
+     .social-item a {
+       text-decoration: none;
+       color: #333;
+     }
+    
+     .social-item a:hover {
+       color: #769fcd;
+     }
+}
+
+@media screen and (max-width: 1000px) {
+    #content,
+    aside {
+        width: 100%;
+        padding: 0;
+    }
+ }
+
+@media screen and (min-width:769px) and (max-width: 1028px) {
+    .next {
+        right: 420px;
+    }
+    .prev {
+        left: -50px;
+    }
+}
