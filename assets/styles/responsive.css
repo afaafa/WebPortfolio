@@ -19,10 +19,6 @@ mobile
 tablet
 */
 @media screen and (max-width: 768px) {
-    #drawer {
-        display: none;
-    }
-
     .icon {
         font-size: 30px;
         padding: 15px;
@@ -34,15 +30,32 @@ tablet
      }
      
     #drawer {
-        overflow: hidden;
-        position: absolute;
-        top: 95px;
-        width: 100%;
-        background-color: rgb(255 255 255 / 90%);
-        z-index: 3;
-        box-shadow:  0 1px 5px rgb(0 0 0 / 20%);    
+      font-size: 14px;
+      background-color: rgb(255 255 255 / 90%);
+      min-width: 280px;
+      box-shadow:  1px 0 5px rgb(0 0 0 / 20%); 
+      width: 311px;
+      right: -311px;
+      height: 100%;
+      overflow-y: auto;
+      position: fixed;
+      top: 0;
+      z-index: 0;
+      display: none;
+      transform: translate(0px);
+      transition: color 0.3s ease-out;
+    -webkit-transition-property: -webkit-transform, left, right;
+    -webkit-backface-visibility: hidden;
     }
     
+    #drawer .active {
+       display: block;
+    }
+
+    .transform {
+      transform: translate(-311px);
+    }
+
     .open {
         -webkit-transform: translate(0, 0);
         transform: translate(0, 0);
